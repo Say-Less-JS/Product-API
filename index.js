@@ -1,6 +1,7 @@
 //server
 const express = require("express");
 const app = express();
+const postgres = require('./db/postgres.js');
 
 app.use(express.json());
 
