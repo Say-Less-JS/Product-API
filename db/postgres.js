@@ -11,14 +11,9 @@ const client = new Client({
 client.connect()
   .then(() => {
     console.log('Connected to PostgreSQL database');
-    const query = 'SELECT * FROM product WHERE id = $1';
-    const values = [2];
-
-    return client.query(query, values);
-  })
-  .then((response) => {
-    console.log('Product response =', response.rows);
   })
   .catch((err) => {
     console.error('Error connecting to PostgreSQL database', err);
   });
+
+module.exports = client;
