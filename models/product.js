@@ -9,7 +9,6 @@ module.exports = (id, callback) => {
       callback(null, response.rows);
     })
     .catch((err) => {
-      console.log('Error retrieving product information');
       callback(err);
-    });
+    })
 };

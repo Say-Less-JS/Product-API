@@ -1,1 +1,1 @@
-const db = require('../db/postgres.js');
+const db = require('../models/product.js');
