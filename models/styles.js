@@ -11,7 +11,6 @@ module.exports = (id, callback) => {
     let photoQuery = 'SELECT id, url, thumbnail_url FROM photos WHERE style_id = $1';
     let skuQuery = 'SELECT sku, size, quantity FROM sku WHERE style_id = $1';
     let style_id = [result[i].id];
-    console.log(i, result.length)
 
     db.query(photoQuery, value)
       .then((response) => {
@@ -38,20 +37,4 @@ module.exports = (id, callback) => {
       console.log('Error retrieving style information');
       callback(err);
     })
-}
-
-// module.exports = (id, callback) => {
-//   let query = 'SELECT id, name, sale_price, original_price, default_style FROM styles WHERE product_id = $1';
-//   let value = [id];
-
-//   db.query(query, value)
-//     .then((response) => {
-//       callback(null, response.rows);
-//     })
-//     .catch((err) => {
-//       console.log('Error retrieving product information');
-//       callback(err);
-//     });
-// };
-
-let i = 0;
+};

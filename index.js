@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const product = require('./controllers/product.js');
 const styles = require('./controllers/styles.js');
+const related = require('./controllers/related.js');
 
 app.use(express.json());
 
@@ -15,6 +16,10 @@ app.get('/product:id', (req, res) => {
 app.get('/styles:id', (req, res) => {
   let id = req.params.id.slice(1);
   styles(req, res, id);
+});
+app.get('/related:id', (req, res) => {
+  let id = req.params.id.slice(1);
+  related(req, res, id);
 })
 
 app.listen(PORT, () => {
