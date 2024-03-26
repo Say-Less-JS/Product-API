@@ -5,10 +5,13 @@ const app = express();
 const product = require('./controllers/product.js');
 const styles = require('./controllers/styles.js');
 const related = require('./controllers/related.js');
+const path = require('path');
 
 app.use(express.json());
 
 var PORT = process.env.PORT || 3000;
+
+app.use(express.static(path.join(__dirname, './public')));
 
 app.get('/product:id', (req, res) => {
   console.log('GET');

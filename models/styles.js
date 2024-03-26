@@ -31,7 +31,6 @@ module.exports = (id, callback) => {
   db.query(query, value)
     .then((response) => {
       result = response.rows;
-      console.log(result);
       extraCaller()
     })
     .catch((err) => {

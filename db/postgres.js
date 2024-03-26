@@ -2,11 +2,11 @@ const { Client } = require('pg');
 require('dotenv').config()
 
 const client = new Client({
-  user: process.env.USER,
+  user: 'postgres',
   database: 'products',
   host: process.env.DB_IP, // Assuming your PostgreSQL server is running locally
   port: 5432, // Default PostgreSQL port
-  password: process.env.PASS // Explicitly set password to null
+  password: 'rfp2401-password' // Explicitly set password to null
 });
 
 client.connect()
