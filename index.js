@@ -25,6 +25,9 @@ app.get('/styles:id', (req, res) => {
 app.get('/related:id', (req, res) => {
   let id = req.params.id.slice(1);
   related(req, res, id);
+});
+app.get('/loaderio-5cd3c632d2e3afb8f1d0d6d24a4ca8df.txt', (req, res) => {
+  res.send('loaderio-5cd3c632d2e3afb8f1d0d6d24a4ca8df');
 })
 
 app.listen(PORT, () => {
