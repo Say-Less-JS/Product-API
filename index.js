@@ -19,6 +19,11 @@ app.get('/product:id', (req, res) => {
   let id = req.params.id.slice(1);
   product(req, res, id);
 });
+app.get('/product', (req, res) => {
+  console.log('GET');
+  let id = req.params.id.slice(1);
+  product(req, res, id);
+});
 app.get('/styles:id', (req, res) => {
   let id = req.params.id.slice(1);
   styles(req, res, id);
