@@ -1,4 +1,5 @@
 //server
+require('dotenv').config()
 const express = require("express");
 const app = express();
 const product = require('./controllers/product.js');
@@ -10,6 +11,7 @@ app.use(express.json());
 var PORT = process.env.PORT || 3000;
 
 app.get('/product:id', (req, res) => {
+  console.log('GET');
   let id = req.params.id.slice(1);
   product(req, res, id);
 });
