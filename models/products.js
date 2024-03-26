@@ -1,10 +1,9 @@
 const db = require('../db/postgres.js');
 
 module.exports = (callback) => {
-  let query = 'SELECT * FROM product LIMIT $1';
-  let limit = 5;
+  let query = 'SELECT * FROM product LIMIT 5';
 
-  db.query(query, limit)
+  db.query(query)
     .then((response) => {
       callback(null, response.rows);
     })
