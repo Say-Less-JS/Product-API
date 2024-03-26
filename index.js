@@ -15,12 +15,10 @@ var PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, './public')));
 
 app.get('/product:id', (req, res) => {
-  console.log('GET');
   let id = req.params.id.slice(1);
   product(req, res, id);
 });
 app.get('/product', (req, res) => {
-  console.log('GET');
   let id = req.params.id.slice(1);
   product(req, res, id);
 });
