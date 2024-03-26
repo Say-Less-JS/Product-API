@@ -28,7 +28,7 @@ app.get('/related:id', (req, res) => {
 });
 app.get('/loaderio-5cd3c632d2e3afb8f1d0d6d24a4ca8df.txt', (req, res) => {
   res.send('loaderio-5cd3c632d2e3afb8f1d0d6d24a4ca8df');
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Listening at port ${PORT}`);
