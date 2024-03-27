@@ -8,8 +8,8 @@ module.exports = (id, callback) => {
   let i = 0;
 
   const extraCaller = function() {
-    let photoQuery = 'SELECT id, url, thumbnail_url FROM photos WHERE style_id = $1';
-    let skuQuery = 'SELECT sku, size, quantity FROM sku WHERE style_id = $1';
+    let photoQuery = 'SELECT url, thumbnail_url FROM photos WHERE style_id = $1';
+    let skuQuery = 'SELECT id, size, quantity FROM sku WHERE style_id = $1';
     let style_id = [result[i].id];
 
     db.query(photoQuery, value)
