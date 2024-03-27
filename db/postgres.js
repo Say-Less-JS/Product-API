@@ -18,4 +18,3 @@ client.connect()
   });
 
 module.exports = client;
-
