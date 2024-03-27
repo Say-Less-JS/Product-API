@@ -14,25 +14,13 @@ var PORT = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname, './public')));
 
-// app.get('/product:id', (req, res) => {
-//   let id = req.params.id.slice(1);
-//   product(req, res, id);
-// });
 app.get('/product', (req, res) => {
   product(req, res, req.query.id);
 });
-// app.get('/styles:id', (req, res) => {
-//   let id = req.params.id.slice(1);
-//   styles(req, res, id);
-// });
 app.get('/styles', (req, res) => {
   let id = req.query.id;
   styles(req, res, id);
 });
-// app.get('/related:id', (req, res) => {
-//   let id = req.params.id.slice(1);
-//   related(req, res, id);
-// });
 app.get('/related', (req, res) => {
   let id = req.query.id;
   related(req, res, id);
